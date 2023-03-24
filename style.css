@@ -1,19 +1,24 @@
-*{
-    margin:0;
-    padding:0;
+
+* {
+    margem : 0 ;
+    preenchimento : 0 ;
 }
 
-.cabecalho {
-    background-color: #424E61;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 24px 0;
+. cabecalho {
+    cor de fundo :  # 424E61 ;
+    cor : branco;
+    exibição : flexível;
+    justificar-conteúdo : espaço ao redor;
+    itens de alinhamento : centro;
+    margem :  24 px  0 ;
 }
 
-.cabecalho-imagem{
-    width: 20%;
+. cabecalho-imagem {
+    largura :  20 % ;
 
 }
-.cabecalho-imagem
+. cabecalho-imagem-lista-item{
+  display: inline-block;
+  margin: 0 16px;
+  font-size: 24px;
+}
