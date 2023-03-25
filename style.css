@@ -1,24 +1,28 @@
-
 * {
-    margem : 0 ;
-    preenchimento : 0 ;
+    margin: 0;
+    padding: 0;
 }
 
-. cabecalho {
-    cor de fundo :  # 424E61 ;
-    cor : branco;
-    exibição : flexível;
-    justificar-conteúdo : espaço ao redor;
-    itens de alinhamento : centro;
-    margem :  24 px  0 ;
+.cabecalho {
+    background-color: #8a2208;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0;
 }
 
-. cabecalho-imagem {
-    largura :  20 % ;
-
+.cabecalho-imagem{
+    width: 20%;
 }
-. cabecalho-imagem-lista-item{
-  display: inline-block;
-  margin: 0 16px;
-  font-size: 24px;
+
+.cabecalho-lista-item{
+    display: inline-block;
+    margin: 0 16px;
+    font-size:  50px;
+}
+.cabecalho-estudante{
+    display: inline-block;
+    margin: 0 16px;
+    font-size: 24px ;
 }
