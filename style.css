@@ -1,92 +1,28 @@
 * {
-    margem :  0 ;
-    preenchimento :  0 ;
-}
-corpo {
-    font-family :  'Poppins' , sem serifa;
-}
-. cabecalho {
-    cor de fundo :  # 424E61 ;
-    cor : branco;
-    exibição : flexível;
-    justificar-conteúdo : espaço ao redor;
-    itens de alinhamento : centro;
-    preenchimento :  24 px  0 ;
+    margin: 0;
+    padding: 0;
 }
 
-. cabecalho-imagem {
-    largura :  10 % ;
+.cabecalho {
+    background-color: #0a0909;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0;
 }
 
-. cabecalho-lista-item {
-    exibição : bloco em linha;
-    margem :  0  16 px ;
-    tamanho da fonte :  16 px ;
+.cabecalho-imagem{
+    width: 20%;
 }
 
-. cabecalho-lista-item  a {
-    decoração de texto : nenhum;
-    cor : branco;
+.cabecalho-lista-item{
+    display: inline-block;
+    margin: 0 16px;
+    font-size:  50px;
 }
-
-. escola-imagem {
-    largura :  25 % ;
-}
-
-# escola {
-    background-image :  linear-gradient ( # 424E61 , # 16CFF8 );
-    cor : branco;
-    exibição : flexível;
-    justificar-conteúdo : centro;
-    itens de alinhamento : centro;
-    preenchimento :  24 px  0 ;
-}
-
-. escola-div-conteudo {
-    largura :  35 % ;
-}
-
-
-. escola-título {
-    preenchimento :  24 px  0 ;
-}
-
-# estudante {
-    preenchimento :  24 px  0 ;
-}
-
-
-. estudante-imagem {
-    largura :  120 pixels ;
-}
-
-. ícone do estudante {
-    largura :  24px ; _
-    preenchimento :  4 px  8 px ;
-}
-
-. estudante-div {
-    alinhamento de texto : centro;
-    preenchimento :  16 px  0 ;
-}
-
-. estudante-título {
-    alinhamento de texto : centro;
-    preenchimento :  50 px  0 ;
-}
-
-. estudante-todos {
-    exibição : grade;
-    grid-template-columns :  20 %  20 %  20 %  20 %  20 % ;
-}
-
-. rodape {
-    cor de fundo : preto;
-    alinhamento de texto : centro;
-}
-
-. rodape-imagem {
-    altura :  60px ; _
-    preenchimento :  12 px  0 ;
-   
+.cabecalho-estudante{
+    display: inline-block;
+    margin: 0 -10px;
+    font-size: 24px ;
 }
