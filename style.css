@@ -68,3 +68,6 @@ body {
     padding: 50px 0;
 }
 
+.estudante-todos{
+    display: grid;
+}
