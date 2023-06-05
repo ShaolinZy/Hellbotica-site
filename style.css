@@ -1,5 +1,19 @@
-*{
-    margin: 0;
+:root {
+    --cor-de-fundo:backgound #EBECEE;
+
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+
+}
+
+h1 {
+    background-color: #EBECEE;
+}
+
+
+    {margin: 0;
     padding: 0;
 }
 body {
