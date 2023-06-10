@@ -13,34 +13,40 @@ body {
     font-size: 32px; 
   }
     background-color: #black
-      font-family: Arial, sans-serif; /* Fonte para o texto */
+      font-family: Arial, sans-serif; 
     }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Cria três colunas iguais */
-      gap: 20px; /* Espaçamento entre as colunas */
-      padding: 20px; /* Espaçamento interno */
-    }
-
-    .grid-item {
-      text-align: center;
-    }
-
-    .grid-item img {
-      max-width: 100%; 
-      height: auto; 
-      margin-bottom: 10px; 
-      width: 500px;
-    }
-
-    .grid-item h2 {
-      color: rgb(0, 0, 0);
-      font-size: 34px;
-      margin-bottom: 5px;
-    }
-
-    .grid-item p {
-      font-size: 24px;
-      margin-bottom: 0;
-    }
+    body {
+        background-color: #f1f1f1; 
+        font-family: Arial, sans-serif; 
+      }
+  
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+        padding: 20px; 
+        margin-top: 40px; 
+      }
+  
+      .grid-item {
+        text-align: center; 
+      }
+  
+      .grid-item img {
+        max-width: 100%; 
+        height: auto; 
+        margin-bottom: 10px; 
+        width: 300px;
+      }
+  
+      .grid-item h2 {
+        color: red; 
+        font-size: 24px; 
+        margin-bottom: 5px;
+      }
+  
+      .grid-item p {
+        font-size: 14px; 
+        margin-bottom: 0; 
+      }
