@@ -1,61 +1,46 @@
-.svg-frame {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    background-color: #f1f1f1; 
   }
-  
-  .svg-frame svg {
-    position: absolute;
-    transition: .5s;
-    z-index: calc(1 - (0.2 * var(--j)));
-    transform-origin: center;
-    width: 344px;
-    height: 344px;
-    fill: none;
+
+  header {
+    text-align: center;
+    background-color: rgb(255, 5, 5);
+    padding: 40px; 
   }
-  
-  .svg-frame:hover svg {
-    transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+
+  h1 {
+    color: rgb(12, 12, 12); 
+    font-size: 32px; 
   }
-  
-  .svg-frame svg #center {
-    transition: .5s;
-    transform-origin: center;
-  }
-  
-  .svg-frame:hover svg #center {
-    transform: rotate(-30deg) translateX(45px) translateY(-3px);
-  }
-  
-  #out2 {
-    animation: rotate16 7s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #out3 {
-    animation: rotate16 3s ease-in-out infinite alternate;
-    transform-origin: center;
-    stroke: #ff0;
-  }
-  
-  #inner3,
-  #inner1 {
-    animation: rotate16 4s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #center1 {
-    fill: #ff0;
-    animation: rotate16 2s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  @keyframes rotate16 {
-    to {
-      transform: rotate(360deg);
+    background-color: #black
+      font-family: Arial, sans-serif; /* Fonte para o texto */
     }
-  }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Cria três colunas iguais */
+      gap: 20px; /* Espaçamento entre as colunas */
+      padding: 20px; /* Espaçamento interno */
+    }
+
+    .grid-item {
+      text-align: center;
+    }
+
+    .grid-item img {
+      max-width: 100%; 
+      height: auto; 
+      margin-bottom: 10px; 
+      width: 500px;
+    }
+
+    .grid-item h2 {
+      color: rgb(0, 0, 0);
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+
+    .grid-item p {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
