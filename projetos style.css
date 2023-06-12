@@ -4,12 +4,12 @@ body {
 
   header {
     text-align: center;
-    background-color: rgb(255, 5, 5);
+    background-color: rgb(0, 0, 0);
     padding: 40px; 
   }
 
   h1 {
-    color: rgb(12, 12, 12); 
+    color: rgb(202, 31, 31); 
     font-size: 32px; 
   }
     background-color: #black
@@ -17,7 +17,7 @@ body {
     }
 
     body {
-        background-color: #f1f1f1; 
+        background-color: #7dc43a; 
         font-family: Arial, sans-serif; 
       }
   
@@ -41,7 +41,7 @@ body {
       }
   
       .grid-item h2 {
-        color: red; 
+        color: rgb(81, 255, 0); 
         font-size: 24px; 
         margin-bottom: 5px;
       }
