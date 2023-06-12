@@ -20,7 +20,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .cabecalho {
-    background-color: #0f0f0f;
+    background-color: #000000;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -181,3 +181,26 @@ body {
     transition-duration: 400ms;
     transition-property: width, left;
   }
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  li{
+    display: inline;
+    font-size: 36px;
+  }
+  
+  
