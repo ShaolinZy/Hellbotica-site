@@ -42,7 +42,7 @@ h1 {
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(29, 69, 201));
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(236, 9, 9));
 }
 
 .student div {
@@ -74,11 +74,11 @@ body {
 }
 
 .button-left {
-  background-color: blue;
+  background-color: rgb(255, 0, 0);
 }
 
 .button-right {
-  background-color: green;
+  background-color: rgb(96, 112, 96);
 }
 
 .button-left:hover,
