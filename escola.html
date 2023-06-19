@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header class="cabecalho">
@@ -24,19 +30,35 @@
             <h2><button>
                 Sobre Nosso Grupo
             </button></h2>
-            <p class="escola-texto-um">O Colégio Estadual Unidade Polo
-                 – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
+            <p class="escola-texto-um">O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
         </div>
+        <h1>Mapa de Ibiporã</h1>
+        <div id="map"></div>
+    </section>
 
+    <script>
+        function redirectToGoogleMaps() {
+            window.location.href = "https://www.google.com/maps?q=Ibiporã";
+        }
 
-    <title>Escola - Localização</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div id="map"></div>
+        function initMap() {
+            var ibipora = { lat: -23.265, lng: -51.048 };
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap" async defer></script>
-    <script src="script.js"></script>
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: ibipora
+            });
+
+            var marker = new google.maps.Marker({
+                position: ibipora,
+                map: map,
+                title: 'Ibiporã'
+            });
+
+            marker.addListener('click', redirectToGoogleMaps);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>
 
