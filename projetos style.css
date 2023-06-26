@@ -1,7 +1,7 @@
 body {
   background-color: #fdfdfd;
   font-family: Arial, sans-serif;
- }
+}
 
 header {
   text-align: center;
@@ -24,13 +24,14 @@ h1 {
 
 .grid-item {
   text-align: center;
+  width: 300px; /* Largura fixa */
+  height: 300px; /* Altura fixa */
 }
 
 .grid-item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  width: 300px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Imagem quadrada com preenchimento */
   transition: transform 0.3s ease; 
 }
 
@@ -75,22 +76,21 @@ footer {
   text-align: center;
 }
 
-
 .switch {
   font-size: 1rem;
   position: relative;
   display: inline-block;
   width: 4em;
   height: 2em;
- }
- 
- .switch input {
+}
+
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
- }
- 
- .slider {
+}
+
+.slider {
   position: absolute;
   cursor: pointer;
   inset: 0;
@@ -98,9 +98,9 @@ footer {
   transition: 0.4s;
   border-radius: 0.5em;
   box-shadow: 0 0.2em #dfd9d9;
- }
- 
- .slider:before {
+}
+
+.slider:before {
   position: absolute;
   content: "";
   height: 1.5em;
@@ -111,31 +111,22 @@ footer {
   background-color: lightsalmon;
   transition: 0.4s;
   box-shadow: 0 0.4em #bcb4b4;
- }
- 
- .slider:hover::before {
-  box-shadow: 0 0.2em #bcb4b4;
-  bottom: 0.5em;
- }
- 
- input:checked+.slider:before {
-  transform: translateX(2em);
-  background: lightgreen;
- }
- .grid-item {
-  text-align: center;
-  height: 200px;
 }
 
-.grid-item img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slider:hover::before {
+  box-shadow: 0 0.2em #bcb4b4;
+  bottom: 0.5em;
 }
+
+input:checked+.slider:before {
+  transform: translateX(2em);
+  background: lightgreen;
+}
+
 .grid-item {
   text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-
