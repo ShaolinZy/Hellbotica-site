@@ -19,6 +19,7 @@
             <li><a class="cabecalho-lista-item" href="projetos.html">Projetos</a></li>
             <li><a class="cabecalho-lista-item" href="estudantes.html">Estudantes</a></li>
         </ul>
+        <button class="cabecalho-lista-toggle" onclick="toggleMenu()">&#9776;</button>
     </header>
     <section class="escola">
         <div class="escola-div-conteudo">
@@ -33,8 +34,17 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            var lista = document.querySelector('.cabecalho-lista');
+            lista.classList.toggle('show');
+        }
+
+        function toggleSobre() {
+            var textoSobre = document.getElementById('texto-sobre');
+            textoSobre.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
-
-
 
