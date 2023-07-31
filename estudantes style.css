@@ -13,13 +13,13 @@ h1 {
 
 .student {
   display: inline-block;
-  margin: 20px;
+  margin: 10px;
   transition: transform 0.3s;
 }
 
 .student img {
   width: 200px;
-  height: 200px;
+  height: 100px;
 }
 
 .student:hover {
