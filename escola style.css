@@ -1,3 +1,5 @@
+/* style.css */
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -5,11 +7,9 @@ body {
 
 h1 {
   margin-top: 40px;
-  
-    font-family: "Nome da fonte", Arial, sans-serif;
-    color: white;
-  }
-  
+  font-family: "Nome da fonte", Arial, sans-serif;
+  color: white;
+}
 
 .student {
   display: inline-block;
@@ -48,11 +48,6 @@ body {
 .student div {
   color: white;
   font-size: 18px;
-}
-
-.student div {
-  color: white;
-  font-size: 18px;
   position: relative;
 }
 
@@ -85,13 +80,9 @@ body {
 .button-right:hover {
   transform: scale(1.1);
 }
+
 .buttons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-
-
-
-
-
