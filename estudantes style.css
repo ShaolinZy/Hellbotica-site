@@ -42,7 +42,7 @@ h1 {
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(236, 9, 9));
+  background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(255, 0, 0));
 }
 
 .student div {
