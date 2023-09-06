@@ -202,5 +202,38 @@ body {
     display: inline;
     font-size: 36px;
   }
-  
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; 
+    }
+
+    .cabecalho {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .cabecalho-imagem {
+        width: 50%; 
+        margin-bottom: 16px; 
+    }
+
+    .cabecalho-lista {
+        margin-top: 16px; 
+    }
+
+    .cabecalho-lista-item {
+        font-size: 14px; 
+    }
+
+    .escola-div-conteudo {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .escola-imagem {
+        width: 80%; 
+    }
+}
+
   
