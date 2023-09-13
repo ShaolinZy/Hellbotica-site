@@ -3,9 +3,27 @@
 <head>
   <title>Estudantes do Grupo</title>
   <link rel="stylesheet" type="text/css" href="estudantes style.css">
+  <style>
+    @media screen and (min-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .student {
+        width: 250px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .student {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-<body>
-  <h1>Estudantes do Grupo</h1>
+<body>pr do Grupo</h1>
+  <input type="text" id="search" placeholder="Pesquisar por nome">
 
   <div class="student">
     <img src="adrielli.png" alt="Estudante 1">
@@ -41,5 +59,26 @@
     <a href="projetos.html">Projetos</a>
     <a href="escola.html">Escola</a>
   </div>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const students = document.querySelectorAll('.student');
+
+    searchInput.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      students.forEach(student => {
+        const name = student.querySelector('div').textContent.toLowerCase();
+
+        if (name.includes(searchTerm)) {
+          student.style.display = 'block';
+        } else {
+          student.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
+aaa

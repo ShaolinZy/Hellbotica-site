@@ -1,8 +1,15 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
   <title>Página dos Projetos</title>
   <link rel="stylesheet" href="projetos style.css">
+  <style>
+    @media screen and (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -11,13 +18,13 @@
 
   <div class="grid-container">
     <div class="grid-item">
-      <img src="Semáfaro.jpg" alt="Foto do Integrante 1">
-      <h2>Semáfaro simples</h2>
-      <p>Semáfaro de rua com uso de arduíno, leds e resistores...</p>
+      <img src="Semáfaro.jpg" alt="Foto do Integrante 1 - Semáforo simples">
+      <h2>Semáforo simples</h2>
+      <p>Semáforo de rua com uso de Arduino, LEDs e resistores...</p>
     </div>
     <div class="grid-item">
-      <img src="S botão.jpg" alt="Semáfaro botão">
-      <h2>Semáfaro com botão</h2>
+      <img src="S botão.jpg" alt="Semáforo com botão">
+      <h2>Semáforo com botão</h2>
       <p>...</p>
     </div>
     <div class="grid-item">
@@ -25,22 +32,36 @@
       <h2>Super Máquina</h2>
       <p>....</p>
     </div>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider"></span>
-      <div class="grid-container">
-        <div class="grid-item">
-          <img src="Botão.jpg" alt="Botao e Led">
-          <h2>Led com Botão</h2>
-          <p>Led que acende com o botão.....</p>
-        </div>
-        <div class="grid-container">
-          <div class="grid-item">
-            <img src="buzzer.png" alt="Buzzer">
-            <h2>Buzzer</h2>
-            <p>Buzzer que emite um som, com as notas musicais</p>
-          </div>
-    </label>
   </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="Botão.jpg" alt="Botão e Led">
+      <h2>Led com Botão</h2>
+      <p>Led que acende com o botão.....</p>
+    </div>
+    <div class="grid-item">
+      <img src="buzzer.png" alt="Buzzer">
+      <h2>Buzzer</h2>
+      <p>Buzzer que emite um som, com as notas musicais</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 HellBótica Projetos</p>
+  </footer>
+
+  <script>
+    const switchInput = document.querySelector('.switch input');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    switchInput.addEventListener('change', () => {
+      gridItems.forEach(item => {
+        item.classList.toggle('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
+
+aaaaa
