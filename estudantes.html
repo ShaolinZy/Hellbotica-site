@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Estudantes do Grupo</title>
-    <link rel="stylesheet" type="text/css" href="estudantes style.css">
-    <style>
-        @media screen and (min-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .student {
-                width: 250px;
-            }
-        }
-        @media screen and (max-width: 767px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .student {
-                width: 100%;
-            }
-        }
-    </style>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hellbotica - Seu Colégio de Confiança">
+    <meta name="keywords" content="Hellbotica, colégio, educação">
+    <meta name="author" content="Seu Nome">
+    
+    <!-- Arquivo CSS externo para estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+    
     <!-- Conexão com a fonte Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <title>Hellbotica</title>
+    
+    <!-- Estilos para o menu -->
+    <style>
+        .menu {
+            display: none;
+            background-color: #333;
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            z-index: 1;
+        }
+        
+        .menu a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header class="cabecalho">
@@ -40,6 +51,19 @@
             <a class="cabecalho-lista-item" href="projetos.html">Projetos</a>
             <a class="cabecalho-lista-item" href="estudantes.html">Estudantes</a>
         </div>
+    </header>
+    
+
+    <!-- Conexão com a fonte Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
+        
+        
     </header>
 
     <h1>Estudantes do Grupo</h1>
