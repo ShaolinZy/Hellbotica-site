@@ -1,125 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Estudantes do Grupo</title>
-  <link rel="stylesheet" type="text/css" href="estudantes style.css">
-  <style>
-    @media screen and (min-width: 768px) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .student {
-        width: 250px;
-      }
-    }
-    @media screen and (max-width: 767px) {
-      .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .student {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>pr do Grupo</h1>
-  <input type="text" id="search" placeholder="Pesquisar por nome">
-
-  <div class="student">
-    <img src="adrielli.png" alt="Estudante 1">
-    <div>Adrielli</div>
-  </div>
-
-  <div class="student">
-    <img src="maria.jpg" alt="Estudante 2">
-    <div>Maria Isabelly</div>
-  </div>
-
-  <div class="student">
-    <img src="mikael.jpeg" alt="Estudante 3">
-    <div>Mikael</div>
-  </div>
-
-  <div class="student">
-    <img src="jhuan.jpg" alt="Estudante 4">
-    <div>Jhuan</div>
-  </div>
-
-  <div class="student">
-    <img src="jose.jpg" alt="Estudante 5">
-    <div>José</div>
-  </div>
-
-  <div class="student">
-    <img src="Miguel.png" alt="Estudante 6">
-    <div>Miguel</div>
-  </div>
-
-  <!DOCTYPE html>
-  <html>
-  <head>
     <title>Estudantes do Grupo</title>
     <link rel="stylesheet" type="text/css" href="estudantes style.css">
     <style>
-
-    </style>
-  </head>
-  <body>
-    <h1>Estudantes do Grupo</h1>
-    
-    <nav>
-      <ul>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="escola.html">Escola</a></li>
-      </ul>
-    </nav>
-  
-  
-    <script>
-  
-    </script>
-  </body>
-  </html>
-  <script>
-    const navigationLinks = document.querySelectorAll('nav a');
-  
-    navigationLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-        // Evite que o link direcione para a página
-        event.preventDefault();
-  
-      
-        const href = link.getAttribute('href');
-  
-   
-        window.location.href = href;
-      });
-    });
-  </script>
-    
-
-  <div class="buttons">
-    <a href="projetos.html">Projetos</a>
-    <a href="escola.html">Escola</a>
-  </div>
-
-  <script>
-    const searchInput = document.getElementById('search');
-    const students = document.querySelectorAll('.student');
-
-    searchInput.addEventListener('input', () => {
-      const searchTerm = searchInput.value.toLowerCase();
-
-      students.forEach(student => {
-        const name = student.querySelector('div').textContent.toLowerCase();
-
-        if (name.includes(searchTerm)) {
-          student.style.display = 'block';
-        } else {
-          student.style.display = 'none';
+        @media screen and (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .student {
+                width: 250px;
+            }
         }
-      });
-    });
-  </script>
+        @media screen and (max-width: 767px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .student {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <!-- Conexão com a fonte Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
+        
+        <!-- Botão para abrir o menu -->
+        <button class="cabecalho-lista-toggle" onclick="toggleMenu()">&#9776;</button>
+        
+        <!-- Menu de Navegação -->
+        <div class="menu" id="menu">
+            <a class="cabecalho-lista-item" href="escola.html">Escola</a>
+            <a class="cabecalho-lista-item" href="projetos.html">Projetos</a>
+            <a class="cabecalho-lista-item" href="estudantes.html">Estudantes</a>
+        </div>
+    </header>
+
+    <h1>Estudantes do Grupo</h1>
+    <input type="text" id="search" placeholder="Pesquisar por nome">
+
+    <div class="student">
+        <img src="adrielli.png" alt="Estudante 1">
+        <div>Adrielli</div>
+    </div>
+
+    <div class="student">
+        <img src="maria.jpg" alt="Estudante 2">
+        <div>Maria Isabelly</div>
+    </div>
+
+    <div class="student">
+        <img src="mikael.jpeg" alt="Estudante 3">
+        <div>Mikael</div>
+    </div>
+
+    <div class="student">
+        <img src="jhuan.jpg" alt="Estudante 4">
+        <div>Jhuan</div>
+    </div>
+
+    <div class="student">
+        <img src="jose.jpg" alt="Estudante 5">
+        <div>José</div>
+    </div>
+
+    <div class="student">
+        <img src="Miguel.png" alt="Estudante 6">
+        <div>Miguel</div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="escola.html">Escola</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const navigationLinks = document.querySelectorAll('nav a');
+
+        navigationLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Evite que o link direcione para a página
+                event.preventDefault();
+
+                const href = link.getAttribute('href');
+
+                window.location.href = href;
+            });
+        });
+    </script>
+
+    <div class="buttons">
+        <a href="projetos.html">Projetos</a>
+        <a href="escola.html">Escola</a>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search');
+        const students = document.querySelectorAll('.student');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            students.forEach(student => {
+                const name = student.querySelector('div').textContent.toLowerCase();
+
+                if (name.includes(searchTerm)) {
+                    student.style.display = 'block';
+                } else {
+                    student.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
