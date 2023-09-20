@@ -7,137 +7,73 @@
     <meta name="description" content="Hellbotica - Seu Colégio de Confiança">
     <meta name="keywords" content="Hellbotica, colégio, educação">
     <meta name="author" content="Seu Nome">
-    
-    <!-- Arquivo CSS externo para estilos personalizados -->
+   
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Conexão com a fonte Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    
+   
     <title>Hellbotica</title>
-    
-    <!-- Estilos para o menu -->
-    <style>
-        .menu {
-            display: none;
-            background-color: #333;
-            text-align: center;
-            position: absolute;
-            top: 50px;
-            right: 10px;
-            z-index: 1;
-        }
-        
-        .menu a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <header class="cabecalho">
         <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
-        
-        <!-- Botão para abrir o menu -->
+       
         <button class="cabecalho-lista-toggle" onclick="toggleMenu()">&#9776;</button>
-        
-        <!-- Menu de Navegação -->
+       
         <div class="menu" id="menu">
             <a class="cabecalho-lista-item" href="escola.html">Escola</a>
             <a class="cabecalho-lista-item" href="projetos.html">Projetos</a>
             <a class="cabecalho-lista-item" href="estudantes.html">Estudantes</a>
         </div>
     </header>
-    
-
-    <!-- Conexão com a fonte Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-    <h1>Estudantes do Grupo</h1>
-    <input type="text" id="search" placeholder="Pesquisar por nome">
-
-    <div class="student">
-        <img src="adrielli.png" alt="Estudante 1">
-        <div>Adrielli</div>
-    </div>
-
-    <div class="student">
-        <img src="maria.jpg" alt="Estudante 2">
-        <div>Maria Isabelly</div>
-    </div>
-
-    <div class="student">
-        <img src="mikael.jpeg" alt="Estudante 3">
-        <div>Mikael</div>
-    </div>
-
-    <div class="student">
-        <img src="jhuan.jpg" alt="Estudante 4">
-        <div>Jhuan</div>
-    </div>
-
-    <div class="student">
-        <img src="jose.jpg" alt="Estudante 5">
-        <div>José</div>
-    </div>
-
-    <div class="student">
-        <img src="Miguel.png" alt="Estudante 6">
-        <div>Miguel</div>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="escola.html">Escola</a></li>
-        </ul>
-    </nav>
-
+   
+    <section class="estudantes">
+        <div class="row">
+            <div class="student">
+                <img src="student1.jpg" alt="Estudante 1">
+                <div class="student-name">Nome do Estudante 1</div>
+            </div>
+            <div class="student">
+                <img src="student2.jpg" alt="Estudante 2">
+                <div class="student-name">Nome do Estudante 2</div>
+            </div>
+            <div class="student">
+                <img src="student3.jpg" alt="Estudante 3">
+                <div class="student-name">Nome do Estudante 3</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="student">
+                <img src="student4.jpg" alt="Estudante 4">
+                <div class="student-name">Nome do Estudante 4</div>
+            </div>
+            <div class="student">
+                <img src="jose.jpg" alt="Estudante 5">
+                <div class="student-name">José</div>
+            </div>
+            <div class="student">
+                <img src="student6.jpg" alt="Estudante 6">
+                <div class="student-name">Nome do Estudante 6</div>
+            </div>
+        </div>
+    </section>
+   
     <script>
-        const navigationLinks = document.querySelectorAll('nav a');
-
-        navigationLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                // Evite que o link direcione para a página
-                event.preventDefault();
-
-                const href = link.getAttribute('href');
-
-                window.location.href = href;
-            });
-        });
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
     </script>
-
-    <div class="buttons">
-        <a href="projetos.html">Projetos</a>
-        <a href="escola.html">Escola</a>
-    </div>
-
-    <script>
-        const searchInput = document.getElementById('search');
-        const students = document.querySelectorAll('.student');
-
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-
-            students.forEach(student => {
-                const name = student.querySelector('div').textContent.toLowerCase();
-
-                if (name.includes(searchTerm)) {
-                    student.style.display = 'block';
-                } else {
-                    student.style.display = 'none';
-                }
-            });
-        });
-    </script>
+   
+    <footer>
+        <p>© 2023 Hellbotica. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
+
