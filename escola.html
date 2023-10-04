@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hellbotica - Seu Colégio de Confiança">
     <meta name="keywords" content="Hellbotica, colégio, educação">
     <meta name="author" content="Seu Nome">
    
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
    
     <title>Hellbotica</title>
+    
+    <style>
+        /* Adicione seus estilos CSS aqui */
+    </style>
 </head>
 <body>
     <header class="cabecalho">
         <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
-       
         <button class="cabecalho-lista-toggle" onclick="toggleMenu()">&#9776;</button>
-       
         <div class="menu" id="menu">
             <a class="cabecalho-lista-item" href="escola.html">Escola</a>
             <a class="cabecalho-lista-item" href="projetos.html">Projetos</a>
@@ -29,39 +29,29 @@
         </div>
     </header>
    
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <!-- Metatags e links para estilos e fontes -->
-    </head>
-    <body>
-        <header class="cabecalho">
-            <!-- Cabeçalho do site -->
-        </header>
-        <section class="escola">
-            <div class="escola-div-conteudo">
-                <h2><button class="btn-sobre" onclick="toggleSobre()">Sobre Nosso Colégio</button></h2>
-                <p class="escola-texto-um" id="texto-sobre">O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
-                <p class="escola-texto-dois" id="texto-historia">Para a construção do colégio, a prefeitura desapropriou uma área de 19.480 M2 de propriedade do Senhor Antonio Zanoni. Na época, foram construídos três blocos. O primeiro, com 10 salas e uma sala ambiente para biblioteca, o segundo destinado à ala administrativa, com banheiros para uso discente, e o terceiro com salas ambientes como: Oficina Industrial, Laboratório de Ciências, Educação para o Lar, Educação Artística. Todos os blocos com proteção e cobertura.</p>
-            </div>
-            <section class="mapa">
-                <!-- Mapa incorporado -->
-            </section>
-        </section>
-        <section class="História">
-            <!-- História do colégio -->
-            <p>O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
-            <p>Para a construção do colégio, a prefeitura desapropriou uma área de 19.480 M2 de propriedade do Senhor Antonio Zanoni. Na época, foram construídos três blocos. O primeiro, com 10 salas e uma sala ambiente para biblioteca, o segundo destinado à ala administrativa, com banheiros para uso discente, e o terceiro com salas ambientes como: Oficina Industrial, Laboratório de Ciências, Educação para o Lar, Educação Artística. Todos os blocos com proteção e cobertura.</p>
-        </section>
+    <h1>Hellbotica</h1>
     
-        <script src="script.js"></script>
-        <!-- Scripts JavaScript -->
-        <footer>
-            <!-- Rodapé -->
-        </footer>
-    </body>
-    </html>
+    <section class="escola">
+        <div class="escola-div-conteudo">
+            <h2><button class="btn-sobre" onclick="toggleSobre()">Sobre Nosso Colégio</button></h2>
+            <p class="escola-texto-um" id="texto-sobre">O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
+            <p class="escola-texto-dois" id="texto-historia">Para a construção do colégio, a prefeitura desapropriou uma área de 19.480 M2 de propriedade do Senhor Antonio Zanoni. Na época, foram construídos três blocos. O primeiro, com 10 salas e uma sala ambiente para biblioteca, o segundo destinado à ala administrativa, com banheiros para uso discente, e o terceiro com salas ambientes como: Oficina Industrial, Laboratório de Ciências, Educação para o Lar, Educação Artística. Todos os blocos com proteção e cobertura.</p>
+        </div>
+        <section class="mapa">
+            <!-- Mapa incorporado -->
+        </section>
+    </section>
     
+    <section class="História">
+        <!-- História do colégio -->
+        <p>O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
+        <p>Para a construção do colégio, a prefeitura desapropriou uma área de 19.480 M2 de propriedade do Senhor Antonio Zanoni. Na época, foram construídos três blocos. O primeiro, com 10 salas e uma sala ambiente para biblioteca, o segundo destinado à ala administrativa, com banheiros para uso discente, e o terceiro com salas ambientes como: Oficina Industrial, Laboratório de Ciências, Educação para o Lar, Educação Artística. Todos os blocos com proteção e cobertura.</p>
+    </section>
+
+    <footer>
+        <p>© 2023 Hellbotica. Todos os direitos reservados.</p>
+    </footer>
+
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
@@ -71,11 +61,15 @@
                 menu.style.display = 'block';
             }
         }
+        
+        function toggleSobre() {
+            var textoSobre = document.getElementById('texto-sobre');
+            if (textoSobre.style.display === 'block') {
+                textoSobre.style.display = 'none';
+            } else {
+                textoSobre.style.display = 'block';
+            }
+        }
     </script>
-   
-    <footer>
-        <p>© 2023 Hellbotica. Todos os direitos reservados.</p>
-    </footer>
 </body>
 </html>
-
