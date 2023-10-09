@@ -1,58 +1,81 @@
-
-.cabecalho {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  position: relative;
-}
-
-.cabecalho-imagem {
-  max-width: 100%; 
-  display: block; 
-  margin: 0 auto;
-}
-
-.estudantes {
+body {
+  font-family: Arial, sans-serif;
   text-align: center;
+}
+h1 {
   margin-top: 40px;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
+  
+    font-family: "Nome da fonte", Arial, sans-serif;
+    color: white;
+  }
+  
 .student {
-  width: 200px;
+  display: inline-block;
   margin: 20px;
   transition: transform 0.3s;
 }
-
 .student img {
-  width: 100%; 
-  height: auto; 
+  width: 200px;
+  height: 200px;
+}
+.student:hover {
+  transform: scale(1.1);
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  text-decoration: none;
+  background-color: #26a131;
+  color: #333;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
-.student-name {
+body {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(29, 69, 201));
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(236, 9, 9));
+}
+
+.student div {
+  color: white;
+  font-size: 18px;
+}
+.student div {
   color: white;
   font-size: 18px;
   position: relative;
 }
-
-.cabecalho-lista-toggle {
-  background-color: transparent;
+.buttons {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 9999;
+}
+.button-left,
+.button-right {
+  padding: 10px 20px;
   color: white;
-  border: none;
-  font-size: 24px;
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s;
 }
 
+.button-left {
+  background-color: blue;
+  background-color: rgb(255, 0, 0);
+}
 
+.button-right {
+  background-color: green;
+  background-color: rgb(96, 112, 96);
+}
 
-
-
-
+.button-left:hover,
+.button-right:hover {
+  transform: scale(1.1);
+}
