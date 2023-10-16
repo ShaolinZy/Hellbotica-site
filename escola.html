@@ -4,74 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hellbotica</title>
+    <meta name="description" content="Hellbotica - Seu Colégio de Confiança">
+    <meta name="keywords" content="Hellbotica, colégio, educação">
+    <meta name="author" content="Seu Nome">
+    
+    <!-- Arquivo CSS externo para estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Conexão com a fonte Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <title>Hellbotica</title>
+    
+    <!-- Estilos para o menu -->
     <style>
-        /* style.css */
-        /* Estilos para o cabeçalho */
-        .cabecalho {
-          background-color: #f2f2f2;
-          padding: 20px;
+        .menu {
+            display: none;
+            background-color: #333;
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            z-index: 1;
         }
         
-        .cabecalho-imagem {
-          width: 100px;
-        }
-        
-        .cabecalho-lista {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-        }
-        
-        .cabecalho-lista-item {
-          display: inline-block;
-          margin-right: 10px;
-        }
-        
-        /* Estilos para a seção da escola */
-        .escola {
-          background-color: #fff;
-          padding: 20px;
-        }
-        
-        .escola-div-conteudo {
-          margin-bottom: 20px;
-        }
-        
-        .escola-texto-um {
-          font-family: 'Poppins', sans-serif;
-          font-size: 16px;
-          line-height: 1.5;
-        }
-        
-        /* Estilos para o mapa */
-        #map {
-          height: 400px;
-          width: 100%;
+        .menu a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
         }
     </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
+        
+        <!-- Botão para abrir o menu -->
+        <button class="cabecalho-lista-toggle" onclick="toggleMenu()">&#9776;</button>
+        
+        <!-- Menu de Navegação -->
+        <div class="menu" id="menu">
+            <a class="cabecalho-lista-item" href="escola.html">Escola</a>
+            <a class="cabecalho-lista-item" href="projetos.html">Projetos</a>
+            <a class="cabecalho-lista-item" href="estudantes.html">Estudantes</a>
+        </div>
+    </header>
+    
+    <!-- Conexão com a fonte Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="cabecalho">
-        <img class="cabecalho-imagem" src="hellbotica2.gif" alt="hellbotica2">
-        <ul class="cabecalho-lista">
-            <li class="cabecalho-lista-item"><a href="escola.html">Escola</a></li>
-            <li class="cabecalho-lista-item"><a href="projetos.html">Projetos</a></li>
-            <li class="cabecalho-lista-item"><a href="estudantes.html">Estudantes</a></li>
-        </ul>
-    </header>
-    <section class="escola">
-        <div class="escola-div-conteudo">
-            <h2><button class="btn-sobre" onclick="toggleSobre()">Sobre Nosso colegio</button></h2>
-            <p class="escola-texto-um" id="texto-sobre">O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.</p>
-        </div>
-    </section>
-    <div id="map"></div>
+        <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
 
-    <script src="script.js"></script>
+
+    </header>
+
+
+    <h1>Estudantes do Grupo</h1>
+    <input type="text" id="search" placeholder="Pesquisar por nome">
+
+    <div class="student">
+        <img src="adrielli.png" alt="Estudante 1">
+        <div>Adrielli</div>
+    </div>
+    <div class="student">
+        <img src="maria.jpg" alt="Estudante 2">
+        <div>Maria Isabelly</div>
+    </div>
+    <div class="student">
+        <img src="mikael.jpeg" alt="Estudante 3">
+        <div>Mikael</div>
+    </div>
+    <div class="student">
+        <img src="jhuan.jpg" alt="Estudante 4">
+        <div>Jhuan</div>
+    </div>
+    <div class="student">
+        <img src="jose.jpg" alt="Estudante 5">
+        <div>José</div>
+    </div>
+    <div class="student">
+        <img src="Miguel.png" alt="Estudante 6">
+        <div>Miguel</div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="escola.html">Escola</a></li>
+        </ul>
+    </nav>
+    <script>
+        const navigationLinks = document.querySelectorAll('nav a');
+        navigationLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Evite que o link direcione para a página
+                event.preventDefault();
+                const href = link.getAttribute('href');
+                window.location.href = href;
+            });
+        });
+    </script>
+    <div class="buttons">
+        <a href="projetos.html">Projetos</a>
+        <a href="escola.html">Escola</a>
+    </div>
+    <script>
+        const searchInput = document.getElementById('search');
+        const students = document.querySelectorAll('.student');
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            students.forEach(student => {
+                const name = student.querySelector('div').textContent.toLowerCase();
+                if (name.includes(searchTerm)) {
+                    student.style.display = 'block';
+                } else {
+                    student.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
