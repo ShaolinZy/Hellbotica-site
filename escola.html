@@ -1,36 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hellbotica - Seu Colégio de Confiança">
-    <meta name="keywords" content="Hellbotica, colégio, educação">
-    <meta name="author" content="Seu Nome">
-   
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-   
-    <title>Hellbotica</title>
-    
-    <style>
-        /* Adicione seus estilos CSS aqui */
-    </style>
+    <!-- ... (seus metadados e links para folhas de estilo) ... -->
 </head>
 <body>
     <header class="cabecalho">
-        <img class="cabecalho-imagem" src="hellbotica2.gif" alt="Hellbotica">
-        <button class="cabecalho-lista-toggle" onclick="toggleMenu()">&#9776;</button>
-        <div class="menu" id="menu">
-            <a class="cabecalho-lista-item" href="escola.html">Escola</a>
-            <a class="cabecalho-lista-item" href="projetos.html">Projetos</a>
-            <a class="cabecalho-lista-item" href="estudantes.html">Estudantes</a>
-        </div>
+        <!-- ... (seu cabeçalho) ... -->
     </header>
-   
+
     <h1>Hellbotica</h1>
-    
+
     <section class="escola">
         <div class="escola-div-conteudo">
             <h2><button class="btn-sobre" onclick="toggleSobre()">Sobre Nosso Colégio</button></h2>
@@ -42,13 +21,14 @@
             <iframe
                 width="600"
                 height="450"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-51.0484!3d-23.2731!4m3!3m2!1s0x0:0x0!4b1!3m1!1s0x0:0x0" allowfullscreen>
+                frameborder="0"
+                style="border:0"
+                src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.4203599159014!2d-51.04077242390008!3d-23.264170850742726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb47ca7de7359d%3A0xd9c73ad5f8b13943!2sUnidade%20Polo%2C%20C%20E-Ef%20M%20P!5e0!3m2!1spt-BR!2sbr!4v1697459341945!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                allowfullscreen>
             </iframe>
         </section>
     </section>
-    
-  
+
     <footer>
         <p>© 2023 Hellbotica. Todos os direitos reservados.</p>
     </footer>
@@ -62,7 +42,7 @@
                 menu.style.display = 'block';
             }
         }
-        
+
         function toggleSobre() {
             var textoSobre = document.getElementById('texto-sobre');
             if (textoSobre.style.display === 'block') {
