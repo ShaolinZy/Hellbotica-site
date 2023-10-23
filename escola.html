@@ -1,34 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola</title>
-    <link rel="stylesheet" href="escola style.css">
-</head>
-<body>
-    <header>
-        <img src="hellbotica2.gif">
-        Escola
-        <div id="menu-icon">&#9776;</div>
-        <nav id="menu">
-            <a href="escola.html">Estudante</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="index.html">Principal</a>
-        </nav>
-    </header>
-    <div id="sobre-nossa-escola">
-        <h1>SOBRE NOSSA ESCOLA</h1>
-        <p>
-            O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.
-        </p>
-        <div id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.420224368977!2d-51.040772424679!3d-23.26417577900522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb47ca7de7359d%3A0xd9c73ad5f8b13943!2sUnidade%20Polo%2C%20C%20E-Ef%20M%20P!5e0!3m2!1spt-BR!2sbr!4v1697627282624!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-    <script src="script.js"></script>
-</body>
-</html>
+@WebServlet("/hellbotica")
+public class SuaServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
+        // Crie o conteúdo HTML dinamicamente
+        StringBuilder html = new StringBuilder();
+        html.append("<!DOCTYPE html>");
+        html.append("<html lang=\"pt-br\">");
+        html.append("<head>");
+        html.append("    <meta charset=\"UTF-8\">");
+        html.append("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+        html.append("    <title>hellbotica</title>");
+        html.append("    <link rel=\"stylesheet\" href=\"escola style.css\">");
+        html.append("</head>");
+        html.append("<body>");
+        html.append("    <header>");
+        html.append("        <img src=\"hellbotica2.gif\">");
+        html.append("        Escola");
+        html.append("        <div id=\"menu-icon\">&#9776;</div>");
+        html.append("        <nav id=\"menu\">");
+        html.append("            <a href=\"escola.html\">Estudante</a>");
+        html.append("            <a href=\"projetos.html\">Projetos</a>");
+        html.append("            <a href=\"index.html\">Principal</a>");
+        html.append("        </nav>");
+        html.append("    </header>");
+        html.append("    <div id=\"sobre-nossa-escola\">");
+        html.append("        <h1>SOBRE NOSSA ESCOLA</h1>");
+        html.append("        <p>");
+        html.append("            O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.");
+        html.append("        </p>");
+        html.append("        <div id=\"mapa\">");
+        html.append("            <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.420224368977!2d-51.040772424679!3d-23.26417577900522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb47ca7de7359d%3A0xd9c73ad5f8b13943!2sUnidade%20Polo%2C%20C%20E-Ef%20M%20P!5e0!3m2!1spt-BR!2sbr!4v1697627282624!5m2!1spt-BR!2sbr\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>");
+        html.append("        </div>");
+        html.append("    </div>");
+        html.append("    <script src=\"script.js\"></script>");
+        html.append("</body>");
+        html.append("</html>");
 
+        response.getWriter().write(html.toString());
+    }
+}
