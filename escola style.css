@@ -1,52 +1,68 @@
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+/* estilo.css */
 
-@WebServlet("/hellbotica")
-public class SuaServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        response.setCharacterEncoding("UTF-8");
-
-        // Gerar o conteúdo HTML com os estilos CSS
-        StringBuilder html = new StringBuilder();
-        html.append("<!DOCTYPE html>");
-        html.append("<html lang=\"pt-br\">");
-        html.append("<head>");
-        html.append("    <meta charset=\"UTF-8\">");
-        html.append("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
-        html.append("    <title>hellbotica</title>");
-        html.append("    <link rel=\"stylesheet\" type=\"text/css\" href=\"seuEstilo.css\">");
-        html.append("</head>");
-        html.append("<body>");
-        html.append("    <header>");
-        html.append("        <img src=\"hellbotica2.gif\" style=\"width: 50px; height: 50px;\">");
-        html.append("        Escola");
-        html.append("        <div id=\"menu-icon\" style=\"font-size: 24px; cursor: pointer; color: #000;\">&#9776;</div>");
-        html.append("        <nav style=\"display: none;\">");
-        html.append("            <a href=\"escola.html\">Estudante</a>");
-        html.append("            <a href=\"projetos.html\">Projetos</a>");
-        html.append("            <a href=\"index.html\">Principal</a>");
-        html.append("        </nav>");
-        html.append("    </header>");
-        html.append("    <div id=\"sobre-nossa-escola\">");
-        html.append("        <h1 style=\"flex: 1; color: #fff;\">SOBRE NOSSA ESCOLA</h1>");
-        html.append("        <p>");
-        html.append("            O Colégio Estadual Unidade Polo – Ensino Fundamental e Médio está localizado na Avenida Engenheiro Beltrão, Nº 1005, zona leste da cidade de Ibiporã, município do Estado do Paraná.");
-        html.append("        </p>");
-        html.append("        <div id=\"mapa\" style=\"flex: 1; padding: 20px; text-align: right;\">");
-        html.append("            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715623.103585721!2d-51.32164181871281!3d-24.570616064169897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb47ca7de7359d%3A0xd9c73ad5f8b13943!2sUnidade%20Polo%2C%20C%20E-Ef%20M%20P!5e0!3m2!1spt-BR!2sbr!4v1698063872036!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->");
-        html.append("        </div>");
-        html.append("    </div>");
-        html.append("    <script src=\"script.js\"></script>");
-        html.append("</body>");
-        html.append("</html>");
-
-        response.getWriter().write(html.toString());
-    }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ff0000; /* Vermelho */
+  font-family: Arial, sans-serif;
 }
 
+header {
+  background-color: #000; /* Preto */
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Alinhar itens na extremidade do cabeçalho */
+  align-items: center;
+}
 
+header img {
+  width: 50px; /* Reduza o tamanho da imagem */
+  height: 50px; /* Reduza o tamanho da imagem */
+}
+
+nav {
+  display: none; /* Ocultar o menu sanduíche por padrão em telas maiores */
+}
+
+#menu-icon {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#menu-icon:hover {
+  color: #ff0000; /* Vermelho para o ícone do menu */
+}
+
+#menu {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  position: absolute;
+  top: 60px;
+  right: 10px; /* Alinhe o menu à direita */
+  padding: 10px;
+}
+
+#menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#sobre-nossa-escola {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#sobre-nossa-escola h1 {
+  flex: 1;
+  color: #fff;
+}
+
+#mapa {
+  flex: 1;
+  padding: 20px;
+  text-align: right; /* Alinhe o conteúdo do mapa à direita */ faça em java
