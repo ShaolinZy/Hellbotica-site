@@ -16,11 +16,14 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
   padding: 20px;
   margin-top: 40px;
 }
+
+
+
 
 .grid-item {
   text-align: center;
@@ -169,10 +172,10 @@ a.button-link:hover {
 }
 .page-title {
   font-size: 32px;
-  transition: transform 0.3s ease; /* Adiciona uma transição para suavizar o efeito de escala */
+  transition: transform 0.3s ease; 
 }
 
 .page-title:hover {
-  transform: scale(1.1); /* Aumenta em 10% ao passar o mouse */
+  transform: scale(1.1); 
 }
 
