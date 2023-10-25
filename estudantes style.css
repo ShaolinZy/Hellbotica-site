@@ -79,3 +79,20 @@ body {
 .button-right:hover {
   transform: scale(1.1);
 }
+.page-title {
+  font-size: 46px; 
+  transition: transform 0.3s; 
+}
+
+.page-title:hover {
+  transform: scale(1.1); 
+}
+.student-name {
+  font-size: 50px; 
+  transition: transform 0.3s; 
+}
+
+.student-name:hover {
+  transform: scale(1.1);
+}
+
