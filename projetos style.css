@@ -167,3 +167,12 @@ a.button-link:hover {
   background-color: #ff8146;
   transform: scale(1.05);
 }
+.page-title {
+  font-size: 32px;
+  transition: transform 0.3s ease; /* Adiciona uma transição para suavizar o efeito de escala */
+}
+
+.page-title:hover {
+  transform: scale(1.1); /* Aumenta em 10% ao passar o mouse */
+}
+
