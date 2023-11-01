@@ -1,68 +1,71 @@
 /* estilo.css */
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #ff0000; /* Vermelho */
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: #000; /* Preto */
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between; /* Alinhar itens na extremidade do cabeçalho */
-  align-items: center;
-}
-
-header img {
-  width: 50px; /* Reduza o tamanho da imagem */
-  height: 50px; /* Reduza o tamanho da imagem */
-}
-
-nav {
-  display: none; /* Ocultar o menu sanduíche por padrão em telas maiores */
-}
-
-#menu-icon {
-  display: block;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#menu-icon:hover {
-  color: #ff0000; /* Vermelho para o ícone do menu */
-}
-
-#menu {
-  display: none;
-  flex-direction: column;
-  background-color: #000;
-  position: absolute;
-  top: 60px;
-  right: 10px; /* Alinhe o menu à direita */
-  padding: 10px;
-}
-
-#menu a {
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-#sobre-nossa-escola {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-#sobre-nossa-escola h1 {
-  flex: 1;
-  color: #fff;
-}
-
-#mapa {
-  flex: 1;
-  padding: 20px;
-  text-align: right; /* Alinhe o conteúdo do mapa à direita */ faça em java
+    margin: 0;
+    padding: 0;
+    background-color: #ff0000; /* Vermelho */
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #000; /* Preto */
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Alinhar itens na extremidade do cabeçalho */
+    align-items: center;
+  }
+  
+  header img {
+    width: 50px; /* Reduza o tamanho da imagem */
+    height: 50px; /* Reduza o tamanho da imagem */
+  }
+  
+  nav {
+    display: none; /* Ocultar o menu sanduíche por padrão em telas maiores */
+  }
+  
+  #menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  #menu-icon:hover {
+    color: #ff0000; /* Vermelho para o ícone do menu */
+  }
+  
+  #menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    right: 10px; /* Alinhe o menu à direita */
+    padding: 10px;
+  }
+  
+  #menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  #sobre-nossa-escola {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  #sobre-nossa-escola h1 {
+    flex: 1;
+    color: #fff;
+    margin-right: 20%; /* Alinhe 20% mais à direita */
+  }
+  
+  #mapa {
+    flex: 1;
+    padding: 20px;
+    text-align: right; /* Alinhe o conteúdo do mapa à direita */
+  }
+  
