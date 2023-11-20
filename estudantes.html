@@ -41,5 +41,25 @@
     <a href="escola.html">Escola Unidade Polo</a>
     <a href="index.html">Principal</a>
   </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const students = document.querySelectorAll('.student img');
+
+    students.forEach(student => {
+      student.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.1)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+
+      student.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+        this.style.transition = 'transform 0.3s ease';
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
 </body>
 </html>

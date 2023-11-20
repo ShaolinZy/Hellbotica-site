@@ -30,23 +30,28 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.420224368977!2d-51.040772424679!3d-23.26417577900522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb47ca7de7359d%3A0xd9c73ad5f8b13943!2sUnidade%20Polo%2C%20C%20E-Ef%20M%20P!5e0!3m2!1spt-BR!2sbr!4v1697627282624!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+<input type="text" id="filtro-nome" placeholder="Pesquisar por nome">
+
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const students = document.querySelectorAll('.student img');
-  
+  document.addEventListener("DOMContentLoaded", function() {
+    const filtroNome = document.getElementById('filtro-nome');
+    const students = document.querySelectorAll('.student');
+
+    filtroNome.addEventListener('input', function() {
+      const filtro = filtroNome.value.toLowerCase();
+
       students.forEach(student => {
-        student.addEventListener('mouseenter', function() {
-          this.style.transform = 'scale(1.1)';
-          this.style.transition = 'transform 0.3s ease';
-        });
-  
-        student.addEventListener('mouseleave', function() {
-          this.style.transform = 'scale(1)';
-          this.style.transition = 'transform 0.3s ease';
-        });
+        const nome = student.querySelector('.student-name').innerText.toLowerCase();
+        if (nome.includes(filtro)) {
+          student.style.display = 'block';
+        } else {
+          student.style.display = 'none';
+        }
       });
     });
-  </script>
+  });
+</script>
+
   </body>
   </html>
   
